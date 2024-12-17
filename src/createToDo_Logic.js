@@ -1,4 +1,4 @@
-// import {getTime} from "./date-fns"; 
+
 
 
 export class toDo {
@@ -33,11 +33,11 @@ export function retrieveTodo() {
     const notes = prompt("Insert any notes");
     if(!notes) return (null);
 
-    // const now = new Date();
-    // const timeStamp = getTime(now);
-    // console.log(timeStamp);
+    const now = new Date();
+    const timeStamp = getTime(now);
+    console.log(timeStamp);
 
-    return new toDo(title, description, dueDate, priority, notes);
+    return new toDo(title, description, dueDate, priority, notes, timeStamp);
 }
 
 
