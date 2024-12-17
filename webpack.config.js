@@ -1,19 +1,10 @@
-const path = require('path');
+import path from 'path';
 
-module.exports = {
-  mode: 'development',
+export default {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  devtool: 'source-map',
+  mode: 'development', 
 };
