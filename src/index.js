@@ -1,17 +1,26 @@
 import {retrieveTodo, toDo} from "./createToDo_Logic.js";
 import { createTodo } from "./createToDo_DOM.js";
-import { getTime } from "date-fns"; 
+import { add, getTime } from "/date-fns"; 
 
 
+document.addEventListener("DOMContentLoaded", () =>{
 
-const addButton = document.querySelector("#addTodo");
-addButton.addEventListener("click", () => {
-    const usersToDo = retrieveTodo();
+    const addButton = document.querySelector("#addTodo");
+if(addButton){
+    
+    addButton.addEventListener("click", () => {
+        const usersToDo = retrieveTodo();
+    
+        if(usersToDo){
+            createTodo(usersToDo);
+        }
+    })
 
-    if(usersToDo){
-        createTodo(usersToDo);
-    }
-})
+} else {
+    console.error("Add button not found");
+}
 
 const now = new Date();
 console.log(`Current timestamp: ${getTime(now)}`);
+
+});
