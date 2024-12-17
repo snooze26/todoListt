@@ -1,0 +1,36 @@
+:root{
+    --red: #FF0000;
+    --pink: #FFA27F;
+    --manilla: #FFE8C5;
+    --green: #97BE5A;
+    --white: white; 
+    --darkGray: #181C14;
+}
+
+.rows{
+    background: var(--pink);
+    opacity: .5;
+    border: 10px ridge var(--green);
+
+}
+
+.todoCell{
+    width: 150px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+#list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: var(--white);
+    border: 1px solid var(--green);
+}
+
+body{
+    background: var(--white);
+}
