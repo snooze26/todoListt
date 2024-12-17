@@ -1,10 +1,19 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // Path to your main JavaScript file
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js', // Name of the output bundle
-    path: path.resolve(__dirname, 'dist'), // Path to the "dist" folder
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'development', // Use "production" for optimized builds
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  devtool: 'source-map',
 };

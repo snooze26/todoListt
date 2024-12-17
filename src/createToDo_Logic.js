@@ -32,7 +32,7 @@ export function retrieveTodo() {
 
     const now = new Date();
     const timeStamp = getTime(now);
-    console.log(timeStamp);
+    console.log(timeStamp, "Here is my timestamp");
 
     return new toDo(title, description, dueDate, priority, notes, timeStamp);
 }
