@@ -6,19 +6,12 @@ import { createTodo } from "./createToDo_DOM.js";
 document.addEventListener("DOMContentLoaded", () =>{
 
     const addButton = document.querySelector("#addTodo");
-if(addButton){
-    
-    addButton.addEventListener("click", () => {
-        const usersToDo = retrieveTodo();
-    
-        if(usersToDo){
-            createTodo(usersToDo);
-        }
-    })
+    const userToDo = retrieveTodo();
 
-} else {
-    console.error("Add button not found");
-}
+    if(userToDo){
+        createTodo(userToDo); 
+        
+    }
 
 // const now = new Date();
 // console.log(`Current timestamp: ${getTime(now)}`);
