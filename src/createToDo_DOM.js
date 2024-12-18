@@ -1,4 +1,6 @@
 export function createTodo(text = ""){
+    console.log("createTodo called")
+
     const todoTable = document.querySelector("#list");
     if(!todoTable){
         console.error("Table element not found");
@@ -7,7 +9,6 @@ export function createTodo(text = ""){
 
     const row = document.createElement("tr");
     row.className = "rows";
-    document.body.appendChild(row);
 
     //add properties 
     const title = document.createElement("td");
@@ -45,6 +46,8 @@ export function createTodo(text = ""){
     //add timeStamp 
     const timeStampCell = document.createElement("td");
     timeStampCell.textContent = text.created;
+    timeStampCell.classList = "todoCell";
+
 
     const editCell = document.createElement("td");
     const editBtn = document.createElement("button");
@@ -80,8 +83,11 @@ export function createTodo(text = ""){
     row.appendChild(checkboxCell);
     row.appendChild(editCell);
     row.appendChild(deleteCell);
+    row.appendChild(timeStampCell);
 
     todoTable.appendChild(row);
 
 
 }
+
+// export function postFirstTodo
