@@ -1,4 +1,4 @@
-import { getTime, format } from "./node_modules/date-fns/index.js"; 
+import { format } from "./node_modules/date-fns/index.js"; 
 
 
 export class toDo {
@@ -34,8 +34,9 @@ export function retrieveTodo() {
     if(!notes) return (null);
 
     const now = new Date();
-    const timeNow = getTime(now);
-    const timeStamp = format(timeNow, "mm/dd/yyyy"); 
+    const timeStamp = format(now, "yyyy-MM-dd HH:mm");
+
+    console.log(timeStamp);
 
     return new toDo(title, description, dueDate, priority, notes, timeStamp);
 }
