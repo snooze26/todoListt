@@ -10,32 +10,64 @@ export function createTodo(text = ""){
     const row = document.createElement("tr");
     row.className = "rows";
 
-    //add properties 
+    //add properties with headers 
+
+    //title field
     const title = document.createElement("td");
-    title.textContent = text.title;
+    const titleHeader = document.createElement("h3");
+    titleHeader.textContent = "Title";
+    title.appendChild(titleHeader);
+    const titleContent = document.createElement("span");
+    title.appendChild(titleContent);
+    titleContent.textContent = text.title;
     title.className = "todoCell";
 
+    //description field 
     const description = document.createElement("td");
-    description.textContent = text.description;
+    const descriptionHeader = document.createElement("h3");
+    descriptionHeader.textContent = "Description"
+    description.appendChild(descriptionHeader);
+    const descriptionContent = document.createElement("span");
+    description.appendChild(descriptionContent);
+    descriptionContent.textContent = text.description;
     description.className = "todoCell";
 
+    //dueDate field 
     const dueDate = document.createElement("td");
-    dueDate.textContent = text.dueDate;
+    const dueDateHeader = document.createElement("h3");
+    dueDateHeader.textContent = "Due Date";
+    dueDate.appendChild(dueDateHeader);
+    const dueDateContent = document.createElement("span");
+    dueDate.appendChild(dueDateContent);
+    dueDateContent.textContent = text.dueDate;
     dueDate.className = "todoCell";
 
-
+    //priority field
     const priority = document.createElement("td");
-    priority.textContent = text.priority;
+    const priorityHeader = document.createElement("h3");
+    priorityHeader.textContent = "Priority Level";
+    priority.appendChild(priorityHeader);
+    const priorityContent = document.createElement("span");
+    priority.appendChild(priorityContent);
+    priorityContent.textContent = text.priority;
     priority.className = "todoCell";
 
-
+    //notes field
     const notes = document.createElement("td");
-    notes.textContent = text.notes;
+    const notesHeader = document.createElement("h3");
+    notesHeader.textContent = "Notes";
+    notes.appendChild(notesHeader);
+    const notesContent = document.createElement("span");
+    notes.appendChild(notesContent);
+    notesContent.textContent = text.notes;
     notes.className = "todoCell";
 
 
-    //add checkbox, edit, delete 
+    //checkbox field 
     const checkboxCell = document.createElement("td");
+    const checkboxHeader = document.createElement("h3");
+    checkboxHeader.textContent = "Completed?";
+    checkboxCell.appendChild(checkboxHeader);
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.addEventListener("click", () => {
@@ -43,9 +75,14 @@ export function createTodo(text = ""){
     });
     checkboxCell.appendChild(checkbox);
 
-    //add timeStamp 
+    //timeStamp field 
     const timeStampCell = document.createElement("td");
-    timeStampCell.textContent = text.created;
+    const timeStampHeader = document.createElement("h3");
+    timeStampHeader.textContent = "Created: ";
+    timeStampCell.appendChild(timeStampHeader);
+    const timeStampContent = document.createElement("span");
+    timeStampContent.textContent = text.created;
+    timeStampCell.appendChild(timeStampContent);
     timeStampCell.classList = "todoCell";
 
 
