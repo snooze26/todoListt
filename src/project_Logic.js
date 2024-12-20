@@ -1,3 +1,5 @@
+import { retrieveTodo } from "./createToDo_Logic";
+
 export class Project {
     constructor(projectName){
         this.name = projectName;
@@ -5,10 +7,14 @@ export class Project {
     };
 
     //add toDo function
-    addToDo(todo){
-        this.todos.push(todo);
-        console.log(testProject, "here is test project!!");
-
+    addToDo(todo) {
+        //checking if todo is a todo by checking prototype
+        if(todo instanceof toDo) {
+            this.todos.push(todo);
+            console.log(`Add ${todo.title} to ${this.name}`);
+        } else { 
+            console.error("Invalid object");
+        }
     };
 
     //remove toDo function
