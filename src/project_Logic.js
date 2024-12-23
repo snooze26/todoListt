@@ -59,6 +59,5 @@ export class Project {
 
 } 
 
-const testProject = Project.createProject();
-console.log(testProject);
+
 

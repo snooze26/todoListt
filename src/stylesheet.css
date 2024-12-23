@@ -34,3 +34,7 @@
 body{
     background: var(--white);
 }
+
+#todoFormDiv{
+    display: none;
+}
