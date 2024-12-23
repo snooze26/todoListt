@@ -11,6 +11,40 @@
 <body>
     <script src="/dist/bundle.js"></script>
 
+
+    <div id="todoFormDiv">
+        <!-- using line breaks until CSS is implemented -->
+
+        <form id="toDoForm">
+            <label for="title">Title:</label>
+            <input name= "title" type="text" id="title">
+            <br><br>
+            
+            <label for="description">Description:</label>
+            <textarea name="description" id="description"></textarea>
+            <br><br>
+            
+            <label for="dueDate">Due Date:</label>
+            <input name="dueDate" type="datetime-local" id="dudeDate">
+            <br><br>
+            
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority">
+                <option class= "prioOptions" value="high">High</option>
+                <option class= "prioOptions" value="medium">Medium</option>
+                <option class= "prioOptions" value="low">Low</option>
+            </select>
+            <br><br>
+            
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes"></textarea>
+            <br><br>
+
+            <button type="submit" id="submitTodo">Create Todo</button>
+            <button type="button" id="closeForm">Close</button>
+        </form>
+    </div>
+
     <button id="addTodo">+</button>
 
     <div id="container">
