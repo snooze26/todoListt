@@ -15,30 +15,31 @@
 
     <button id="addTodo">+</button>
 
-    <div id="entryForm">
-        <label for="title">Task Name: </label>
-        <input type="text" id="title" name="title">
+    <div id="formDiv">
+        <form id="entryForm">
+            <label for="title">Task Name: </label>
+            <input type="text" id="title" name="title">
 
-        <label for="description">Description: </label>
-        <textarea id="description" name="description"></textarea>
-       
-        <label for="dueDate">Due Date: </label>
-        <input type="datetime-local" id="dueDate" name="dueDate">
-       
-        <label for="priority">Priority Level: </label>
-        <select name="priority" id="priortity">
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-        </select>
+            <label for="description">Description: </label>
+            <textarea id="description" name="description"></textarea>
+            
+            <label for="dueDate">Due Date: </label>
+            <input type="datetime-local" id="dueDate" name="dueDate">
+            
+            <label for="priority">Priority Level: </label>
+            <select name="priority" id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
 
-        <label for="notes">Notes: </label>
-        <textarea id="notes" name="notes"></textarea>
+            <label for="notes">Notes: </label>
+            <textarea id="notes" name="notes"></textarea>
 
 
-        <button type="reset">Cancel</button>
-        <button type="submit">Create Task</button>
-
+            <button type="reset">Cancel</button>
+            <button type="submit">Create Task</button>
+        </form>
     </div>
 
     <div id="container">
