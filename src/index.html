@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <script type ="module" src="index.js"></script>
+    <script type ="module" src="/src/index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
@@ -12,9 +12,15 @@
     <script src="/dist/bundle.js"></script>
 
 
+    <div id="selectProject">
+        <h2>Projects</h2>
+        <select name="project" id="project">
+            <option value="" disabled selected>Select a Project</option>
+        </select>
+    </div>
+    
     <div id="todoFormDiv">
         <!-- using line breaks until CSS is implemented -->
-
         <form id="toDoForm">
             <label for="title">Title:</label>
             <input name= "title" type="text" id="title">
@@ -47,11 +53,10 @@
 
     <button id="addTodo">+</button>
 
-    <div id="container">
-        <div id="listContainer">
-            <table id="list">
+    <div id="listContainer">
+        <h2>Todos</h2>
+        <div id="todoList">
 
-            </table>
         </div>
         
     </div>
