@@ -1,13 +1,15 @@
 import { toDo } from "./createToDo_Logic.js";
 import { format } from "./node_modules/date-fns/index.js";
 
-
+//array to gather all projects 
 export class Project {
     constructor(projectName, description, created){
+        this.id = Date.now();
         this.name = projectName;
         this.todos = [];
         this.description = description;
         this.created = created; 
+        
     };
 
     //add toDo 
@@ -50,14 +52,16 @@ export class Project {
 
 
 
+
     // //remove toDo function
     // removeTodDo(todoTitle){
     //     this.todos = this.todos.filter(todo => todo.title !== todoTitle);
     // }
-
-    //extendTodo(todo){
+    //  //extendTodo(todo){
 
 } 
+
+
 
 
 
