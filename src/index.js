@@ -1,19 +1,18 @@
-import {retrieveTodo, toDo} from "./createToDo_Logic.js";
-import { createTodo } from "./createToDo_DOM.js";
+import {createTodo, toDo} from "./createToDo_Logic.js";
+import { postTodo } from "./createToDo_DOM.js";
 import { Project } from "./project_Logic.js";
 import { createTableHeaders } from "./createTableHeaders.js";
+// import { add } from "date-fns";
 // import { getTime } from "date-fns"; 
 
 
-document.addEventListener("DOMContentLoaded", () =>{
-    createTableHeaders();
-    createTodo({
-        title: "Sample Todo",
-        description: "This is a description.",
-        dueDate: "2025-01-20",
-        priority: "High",
-        project: "Project Alpha",
-        notes: "Some notes.",
-        created: new Date().toLocaleString(),
-    })
+const addButton = document.querySelector("#addTodo");
+console.log(addButton);
+
+document.addEventListener("DOMContentLoaded", () =>{   
+
+    addButton.addEventListener("click", () => {
+         const toDo = createTodo();
+         console.log(toDo);
+    });
 });
