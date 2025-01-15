@@ -4,22 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <script type ="module" src="index.js"></script>
+    <script type ="module" src="/src/index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
     <script src="/dist/bundle.js"></script>
 
+
+    <div id="Projects">
+        <h2>Projects</h2>
+        <select name="selectProject" id="selectProject">
+            <option value="" disabled selected>Select a Project</option>
+        </select>
+    </div>
+    
+    <div id="todoFormDiv">
+        <!-- using line breaks until CSS is implemented -->
+        <form id="toDoForm">
+            <label for="title">Title:</label>
+            <input name= "title" type="text" id="title">
+            <br><br>
+            
+            <label for="description">Description:</label>
+            <textarea name="description" id="description"></textarea>
+            <br><br>
+            
+            <label for="dueDate">Due Date:</label>
+            <input name="dueDate" type="datetime-local" id="dueDate">
+            <br><br>
+            
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority">
+                <option class= "prioOptions" value="high">High</option>
+                <option class= "prioOptions" value="medium">Medium</option>
+                <option class= "prioOptions" value="low">Low</option>
+            </select>
+            <br><br>
+            
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes"></textarea>
+            <br><br>
+
+            <button type="submit" id="submitTodo">Create Todo</button>
+            <button type="button" id="closeForm">Close</button>
+        </form>
+    </div>
+
     <button id="addTodo">+</button>
 
-    <div id="container">
-        <div id="listContainer">
-            <table id="list">
+    <div id="listContainer">
+        <h2>Todos</h2>
+        <div id="todoList">
 
-            </table>
         </div>
-        
     </div>
 </body>
 </html>

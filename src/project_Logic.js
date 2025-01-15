@@ -1,9 +1,15 @@
 import { toDo } from "./createToDo_Logic.js";
+import { format } from "./node_modules/date-fns/index.js";
 
+//array to gather all projects 
 export class Project {
-    constructor(projectName){
+    constructor(projectName, description, created){
+        this.id = Date.now();
         this.name = projectName;
         this.todos = [];
+        this.description = description;
+        this.created = created; 
+        
     };
 
     //add toDo 
@@ -18,7 +24,7 @@ export class Project {
     };
 
     //display toDo
-    storeTodo(){
+    storeTodo() {
         console.log(`Project: "${this.name}"`);
         
         //check to see if array is empty if so throw error, if not diplayInfo of toDo
@@ -30,18 +36,32 @@ export class Project {
 
     };
 
-    create
+    static createProject() {
+        const name = prompt("Project Name: ");
+        if(!name) return null;
+        
+        const description = prompt("Description: ");
+        if(!description) return null;
+
+        const now = new Date();
+        const created = format(now, "yyyy-MM-dd HH:mm");
+        if(!created) return null; 
+
+        return new Project (name, description, created);
+    }
+
+
+
 
     // //remove toDo function
     // removeTodDo(todoTitle){
     //     this.todos = this.todos.filter(todo => todo.title !== todoTitle);
     // }
-
-    //extendTodo(todo){
-
-
-
+    //  //extendTodo(todo){
 
 } 
+
+
+
 
 
