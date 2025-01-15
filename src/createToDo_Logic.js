@@ -2,11 +2,12 @@ import { format } from "./node_modules/date-fns/index.js";
 
 
 export class toDo {
-    constructor(title, description, dueDate, priority, notes, created){
+    constructor(title, description, dueDate, project, priority, notes, created, ){
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.project = project; 
         this.notes = notes; 
         this.created = created;
     }
@@ -36,9 +37,9 @@ export function retrieveTodo() {
     const now = new Date();
     const timeStamp = format(now, "yyyy-MM-dd HH:mm");
 
-    console.log(timeStamp);
-
-    return new toDo(title, description, dueDate, priority, notes, timeStamp);
+    const project = prompt("Project: ");
+    if(!project) return (null);
+    return new toDo(title, description, dueDate, priority, notes, timeStamp, project);
 }
 
 
