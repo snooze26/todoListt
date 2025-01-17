@@ -30,7 +30,9 @@ export class Project {
 
     };
 
-    create
+    get length(){
+        return this.todos.length;
+    }
 
     // //remove toDo function
     // removeTodDo(todoTitle){
