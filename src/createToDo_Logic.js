@@ -18,7 +18,7 @@ export class toDo {
     }
 }
 
-export function retrieveTodo() {
+export function createTodo() {
     const title = prompt("Enter the title:");
     if(!title) return null;
 
@@ -39,6 +39,7 @@ export function retrieveTodo() {
 
     const project = prompt("Project: ");
     if(!project) return (null);
+    
     return new toDo(title, description, dueDate, priority, notes, timeStamp, project);
 }
 

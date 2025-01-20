@@ -1,4 +1,4 @@
-export function createTodo(text = ""){
+export function postTodo(text = ""){
     console.log("createTodo called")
 
     const todoTable = document.querySelector("#list");
@@ -96,5 +96,3 @@ export function createTodo(text = ""){
 
 }
 
-
-console.log(createTodo());
