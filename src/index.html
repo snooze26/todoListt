@@ -16,32 +16,44 @@
 
     <div id="formDiv">
         <form id="entryForm">
-            <label for="title">Task Name: </label>
-            <input type="text" id="title" name="title">
+            <p>
+                <label for="title">Task Name: </label>
+                <input type="text" id="title" name="title">
+            </p>
 
-            <label for="description">Description: </label>
-            <textarea id="description" name="description"></textarea>
+            <p>
+                <label for="description">Description: </label>
+                <textarea id="description" name="description"></textarea>
+            </p>
 
-            <label for="dueDate">Due Date: </label>
-            <input type="datetime-local" id="dueDate" name="dueDate">
+            <p>
+                <label for="dueDate">Due Date: </label>
+                <input type="datetime-local" id="dueDate" name="dueDate">
+            </p>
 
+            <p>
+                <label for="priority">Priority Level: </label>
+                <select name="priority" id="priority">
+                    <option value="select" selected disabled>Select an Option</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </p>
 
-            <label for="priority">Priority Level: </label>
-            <select name="priority" id="priority">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-
-            <label for="project">Project Name: </label>
-            <input type="text" id="project" name="project">
-
-            <label for="notes">Notes: </label>
-            <textarea id="notes" name="notes"></textarea>
-
-
-            <button type="reset">Cancel</button>
-            <button type="submit">Create Task</button>
+            <p>
+                <label for="project">Project Name: </label>
+                <input type="text" id="project" name="project">
+            </p>
+            <p>
+                <label for="notes">Notes: </label>
+                <textarea id="notes" name="notes"></textarea>
+    
+            </p>
+            <p>
+                <button type="reset">Cancel</button>
+                <button type="submit">Create Task</button>
+            </p>
         </form>
     </div>
 
